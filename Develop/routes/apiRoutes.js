@@ -9,7 +9,7 @@ router.get('/notes', (req, res) => {
 router.post('/notes', (req, res) => {
     let db = fs.readFileSync('db/db.json')
     db = JSON.parse(db)
-    res.join(db)
+    res.json(db)
 
     let userNote = {
         title: req.body.title,
